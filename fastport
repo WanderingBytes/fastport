@@ -1,0 +1,14 @@
+#!/bin/bash
+
+if test -z "$1"
+then
+ echo "you need to give the ip as an argument"
+else
+ echo "Scanning for all ports quickly, Then using those ports for an aggressive scan!"
+ ports=$(nmap -Pn -p- --min-rate=1000 -T4 $1 | grep ^[0-9] | cut -d '/' -f 1 | tr '\n' ',' | sed s/,$//)
+ echo "$ports, were found, now scanning aggressively"
+ results=$(nmap -Pn -A -p $ports $1 -oN nmapscan.txt)
+ echo "$results"
+fi
+
+
