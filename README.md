@@ -1,6 +1,6 @@
 # fastport
-This is a simple binary I wrote to automate a nmap in a robust efficient way.
-It will take a host as an argument then do a fast nmap port discovery scan to get a list of all ports open quickly, then it will forward those ports into another nmap scan that will do a more aggresive scan. 
+This is a simple binary I wrote to automate nmap in a robust efficient way.
+It will take a host as an argument then do a fast nmap port discovery scan to get a list of all ports open quickly, then it will forward those ports into another nmap scan that will do a more aggresive scan. Saving time ultimately.  
 
 ## Installation
 
